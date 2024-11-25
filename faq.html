@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FAQ - Online Voting System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            line-height: 1;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1e2a47;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        .navbar-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .navbar-item {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-item:hover {
+            color: #f26b38;
+        }
+
+        /* FAQ Page Styles */
+        .faq-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px 10px;
+            background: linear-gradient(135deg, #1e2a47, #4f6d7a);
+            height: 91vh;
+        }
+
+        .faq-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 91%;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .faq-box h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* FAQ Item Styles */
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: #2c3e50;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #f26b38;
+            color: white;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 5px;
+            margin-top: 4px;
+            background-color: #f9f9f9;
+            border-left: 2px solid #f26b38;
+            border-radius: 3px;
+        }
+
+        /* Submit Question Form */
+        .question-form {
+            background-color: white;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 91%;
+            max-width: 500px;
+        }
+
+        .question-form h3 {
+            margin-bottom: 10px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .form-input {
+            width: 91%;
+            padding: 9px;
+            margin-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+
+        .form-input:focus {
+            border-color: #f26b38;
+            outline: none;
+        }
+
+        .form-textarea {
+            width: 91%;
+            padding: 10px;
+            height: 100px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: #2c3e50;
+            resize: none;
+        }
+
+        .form-textarea:focus {
+            border-color: #f26b38;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #f26b38;
+            color: white;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #e55a29;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #1e2a47;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        .footer a {
+            color: #f26b38;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-item">Home</a></li>
+            <li><a href="login.html" class="navbar-item">Login</a></li>
+            <li><a href="register.html" class="navbar-item">Register</a></li>
+            <li><a href="about.html" class="navbar-item">About Voting</a></li>
+            <li><a href="candidates.html" class="navbar-item">Candidates</a></li>
+            <li><a href="vote.html" class="navbar-item">Vote Now</a></li>
+            <li><a href="results.html" class="navbar-item">Results</a></li>
+            <li><a href="faq.html" class="navbar-item">FAQ</a></li>
+            <li><a href="security.html" class="navbar-item">Security</a></li>
+            <li><a href="contact.html" class="navbar-item">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <!-- FAQ Box -->
+        <div class="faq-box">
+            <h2>Frequently Asked Questions</h2>
+
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(1)">What is the Online Voting System?</div>
+                <div class="faq-answer" id="answer1">
+                    The Online Voting System allows registered users to vote in elections through a secure web platform from any device with an internet connection.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(2)">How can I register to vote?</div>
+                <div class="faq-answer" id="answer2">
+                    You can register to vote by visiting the registration page, entering your details, and verifying your email address.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(3)">Is my vote confidential?</div>
+                <div class="faq-answer" id="answer3">
+                    Yes, all votes cast through the Online Voting System are anonymous and encrypted to ensure confidentiality.
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(4)">Can I vote multiple times?</div>
+                <div class="faq-answer" id="answer4">
+                    No, each user can vote only once per election. The system ensures that duplicate votes are prevented.
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(5)">What if I forget my password?</div>
+                <div class="faq-answer" id="answer5">
+                    If you forget your password, you can reset it using the "Forgot Password" link on the login page.
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit a Question Form -->
+        <div class="question-form">
+            <h3>Submit Your Question</h3>
+            <form action="submit-question.php" method="POST">
+                <input type="text" name="name" class="form-input" placeholder="Write here" required>
+                <input type="email" name="email" class="form-input" placeholder="Email" required>
+                <input type="Mobile" name="Mobile" class="form-input" placeholder="Number" required>
+                <button>Submit</button>

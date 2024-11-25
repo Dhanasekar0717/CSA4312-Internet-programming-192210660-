@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Election Results - Online Voting System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;  /* Dark blue */
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1e2a47;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .navbar-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar-item {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-item:hover {
+            color: #f26b38;
+        }
+
+        /* Results Page Styles */
+        .results-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e2a47, #4f6d7a);
+        }
+
+        .results-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .results-box h2 {
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .result-item {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .candidate-name {
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+
+        .vote-count {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f26b38;
+        }
+
+        .back-to-home {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #f26b38;
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #1e2a47;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        .footer a {
+            color: #f26b38;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-item">Home</a></li>
+            <li><a href="login.html" class="navbar-item">Login</a></li>
+            <li><a href="register.html" class="navbar-item">Register</a></li>
+            <li><a href="about.html" class="navbar-item">About Voting</a></li>
+            <li><a href="candidates.html" class="navbar-item">Candidates</a></li>
+            <li><a href="vote.html" class="navbar-item">Vote Now</a></li>
+            <li><a href="results.html" class="navbar-item">Results</a></li>
+            <li><a href="faq.html" class="navbar-item">FAQ</a></li>
+            <li><a href="security.html" class="navbar-item">Security</a></li>
+            <li><a href="contact.html" class="navbar-item">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Results Section -->
+    <div class="results-container">
+        <div class="results-box">
+            <h2>Election Results</h2>
+            
+            <!-- Result for each candidate -->
+            <div class="result-item">
+                <span class="candidate-name">Chandrababu Naidu - TDP</span>
+                <span class="vote-count">1200 Votes</span>
+            </div>
+            <div class="result-item">
+                <span class="candidate-name">Pawan Kalyan - Jana Sena Party</span>
+                <span class="vote-count">950 Votes</span>
+            </div>
+            <div class="result-item">
+                <span class="candidate-name">Jagan Mohan Reddy - YSR Congress</span>
+                <span class="vote-count">1400 Votes</span>
+            </div>
+            <div class="result-item">
+                <span class="candidate-name">Purandeswari - BJP</span>
+                <span class="vote-count">800 Votes</span>
+            </div>
+
+            <a href="index.html" class="back-to-home">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2024 Online Voting System | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+</body>
+
+</html>

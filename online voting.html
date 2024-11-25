@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Voting System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Reset default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Social Media Icons at the top */
+        .social-icons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.8rem;
+            margin: 0 10px;
+            background-color: #1e2a47;
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #f26b38;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1e2a47;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .navbar-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar-item {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-item:hover {
+            color: #f26b38;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e2a47, #4f6d7a);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            background-color: #f26b38;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin-right: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e55a29;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #f26b38;
+            padding: 14px 30px;
+            border-radius: 6px;
+            border: 2px solid #f26b38;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f26b38;
+            color: white;
+        }
+
+        /* Important Voting Points Section */
+        .important-voting-points {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .important-voting-points h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .points {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .point-box {
+            background-color: #f0f4f8;
+            padding: 30px;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .point-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .point-box i {
+            font-size: 3rem;
+            color: #f26b38;
+            margin-bottom: 20px;
+        }
+
+        .point-box h3 {
+            font-size: 1.5rem;
+            color: #1e2a47;
+            margin-bottom: 20px;
+        }
+
+        .point-box p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #1e2a47;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        .footer a {
+            color: #f26b38;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .points {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .point-box {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/yourusername" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/yourusername" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <!-- Header Section with Navigation -->
+    <header class="hero">
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li><a href="home.html" class="navbar-item">Home</a></li>
+                <li><a href="login.html" class="navbar-item">Login</a></li>
+                <li><a href="register.html" class="navbar-item">Register</a></li>
+                <li><a href="about.html" class="navbar-item">About Voting</a></li>
+                <li><a href="candidates.html" class="navbar-item">Candidates</a></li>
+                <li><a href="vote.html" class="navbar-item">Vote Now</a></li>
+                <li><a href="results.html" class="navbar-item">Results</a></li>
+                <li><a href="faq.html" class="navbar-item">FAQ</a></li>
+                <li><a href="security.html" class="navbar-item">Security</a></li>
+                <li><a href="contact.html" class="navbar-item">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Welcome to the Online Voting System</h1>
+            <p>Your vote matters. Cast your ballot securely, anytime, anywhere.</p>
+            <a href="register.html" class="btn-primary">Get Started</a>
+            <a href="login.html" class="btn-secondary">Login to Vote</a>
+        </div>
+    </header>
+
+    <!-- Important Voting Points Section -->
+    <section class="important-voting-points">
+        <h2>Why Voting Matters</h2>
+        <div class="points">
+            <div class="point-box">
+                <i class="fas fa-hand-paper"></i>
+                <h3>Voting is Your Right</h3>
+                <p>Every citizen has the right to vote and have their voice heard in shaping the future.</p>
+            </div>
+            <div class="point-box">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Your Vote Makes a Difference</h3>
+                <p>Your vote can change the course of elections, ensuring the best candidates take charge.</p>
+            </div>
+            <div class="point-box">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure, Anonymous Voting</h3>
+                <p>Our online system ensures your vote is protected and your privacy is guaranteed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024

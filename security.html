@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Security - Online Voting System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            line-height: 1.1;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1e2a47;
+            padding: 5px 10px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .navbar-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .navbar-item {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-item:hover {
+            color: #f26b38;
+        }
+
+        /* Security Section Styles */
+        .security-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px 10px;
+            background: linear-gradient(135deg, #1e2a47, #4f6d7a);
+            height: 100vh;
+            animation: slideIn 1s ease-out;
+        }
+
+        .security-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 20px;
+            animation: zoomIn 1s ease-out;
+        }
+
+        .security-box h2 {
+            margin-bottom: 30px;
+            text-align: center;
+            color: #2c3e50;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Section Content */
+        .security-section {
+            margin-bottom: 10px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .security-title {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .security-description {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #1e2a47;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            font-size: 1rem;
+            animation: fadeIn 2s ease-ou
+        }
+
+        .footer a {
+            color: #f26b38;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-item">Home</a></li>
+            <li><a href="login.html" class="navbar-item">Login</a></li>
+            <li><a href="register.html" class="navbar-item">Register</a></li>
+            <li><a href="about.html" class="navbar-item">About Voting</a></li>
+            <li><a href="candidates.html" class="navbar-item">Candidates</a></li>
+            <li><a href="vote.html" class="navbar-item">Vote Now</a></li>
+            <li><a href="results.html" class="navbar-item">Results</a></li>
+            <li><a href="faq.html" class="navbar-item">FAQ</a></li>
+            <li><a href="security.html" class="navbar-item">Security</a></li>
+            <li><a href="contact.html" class="navbar-item">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Security Section -->
+    <div class="security-container">
+        <!-- Security Box -->
+        <div class="security-box">
+            <h2>Security Features of the Online Voting System</h2>
+
+            <div class="security-section">
+                <div class="security-title">1. Data Encryption</div>
+                <div class="security-description">
+                    All data transmitted between voters and the voting system is encrypted using SSL (Secure Sockets Layer)
+                    technology. This ensures that your personal information and vote remain private and secure while being
+                    transmitted over the internet.
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="security-title">2. Voter Authentication</div>
+                <div class="security-description">
+                    Voters are required to authenticate their identity using a secure, multi-step process. This includes
+                    email verification during the registration process and secure login using strong, hashed passwords.
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="security-title">3. Anonymous Voting</div>
+                <div class="security-description">
+                    To maintain the confidentiality of your vote, the Online Voting System uses an anonymous voting mechanism.
+                    No one, including administrators, can trace your vote back to you once it has been cast.
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="security-title">4. Two-Factor Authentication (2FA)</div>
+                <div class="security-description">
+                    For added security, the system implements Two-Factor Authentication (2FA) for login. This requires users
+                    to provide a second form of verification (e.g., a one-time code sent to their phone or email).
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="security-title">5. Vote Integrity</div>
+                <div class="security-description">
+                    The voting process is protected against tampering through a combination of hashing algorithms and digital
+                    signatures, ensuring that votes cannot be altered once cast. The system also prevents duplicate votes by
+                    tracking voter participation.
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="security-title">6. Secure Data Storage</div>
+                <div class="security-description">
+                    Voter data and vote records are stored securely in an encrypted database. Only authorized personnel can
+                    access and manage this data, and all access is logged for auditing purposes.
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="security-title">7. Regular Security Audits</div>
+                <div class="security-description">
+                    The system undergoes regular security audits by independent security experts to ensure there are no
+                    vulnerabilities. These audits help to identify and fix any potential risks before they can be exploited.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Online Voting System | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+    </div>
+
+</body>
+
+</html>

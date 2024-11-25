@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Candidates - Online Voting System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;  /* Dark blue */
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1e2a47;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .navbar-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar-item {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-item:hover {
+            color: #f26b38;
+        }
+
+        /* Candidates Page Styles */
+        .candidates-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e2a47, #4f6d7a);
+            padding: 20px 0;
+        }
+
+        .candidates-box {
+            background-color: white;
+            width: 100%;
+            max-width: 1000px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .candidates-box h2 {
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .candidate-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0;
+        }
+
+        .candidate-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .candidate-item:hover {
+            transform: scale(1.05);
+        }
+
+        .candidate-photo {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .candidate-name {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .candidate-party {
+            font-size: 1.1rem;
+            color: #f26b38;
+            margin-bottom: 15px;
+        }
+
+        .candidate-description {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .view-more-btn {
+            text-decoration: none;
+            background-color: #f26b38;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .view-more-btn:hover {
+            background-color: #e55a29;
+        }
+
+        .back-to-home {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #f26b38;
+            font-size: 1.1rem;
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #1e2a47;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        .footer a {
+            color: #f26b38;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-item">Home</a></li>
+            <li><a href="login.html" class="navbar-item">Login</a></li>
+            <li><a href="register.html" class="navbar-item">Register</a></li>
+            <li><a href="about.html" class="navbar-item">About Voting</a></li>
+            <li><a href="candidates.html" class="navbar-item">Candidates</a></li>
+            <li><a href="vote.html" class="navbar-item">Vote Now</a></li>
+            <li><a href="results.html" class="navbar-item">Results</a></li>
+            <li><a href="faq.html" class="navbar-item">FAQ</a></li>
+            <li><a href="security.html" class="navbar-item">Security</a></li>
+            <li><a href="contact.html" class="navbar-item">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Candidates Section -->
+    <div class="candidates-container">
+        <div class="candidates-box">
+            <h2>Meet the Candidates</h2>
+            <ul class="candidate-list">
+                <!-- Candidate 1 (YSR Congress Party) -->
+                <li class="candidate-item">
+                    <img src="ysrcp_candidate.jpg" alt="YSRCP Candidate" class="candidate-photo">
+                    <div class="candidate-name">Y. S. Jagan Mohan Reddy</div>
+                    <div class="candidate-party">YSR Congress Party (YSRCP)</div>
+                    <div class="candidate-description">Jagan Mohan Reddy is the current Chief Minister of Andhra Pradesh, known for his efforts in welfare schemes and rural development. His focus is on providing affordable healthcare, education, and improving infrastructure.</div>
+                    <a href="candidate-details.html" class="view-more-btn">View More</a>
+                </li>
+
+                <!-- Candidate 2 (Telugu Desam Party) -->
+                <li class="candidate-item">
+                    <img src="tdp_candidate.jpg" alt="TDP Candidate" class="candidate-photo">
+                    <div class="candidate-name">N. Chandrababu Naidu</div>
+                    <div class="candidate-party">Telugu Desam Party (TDP)</div>
+                    <div class="candidate-description">Chandrababu Naidu is a veteran politician and the former Chief Minister of Andhra Pradesh. He has focused on technological innovation, rural development, and creating a knowledge-based economy.</div>
+                    <a href="candidate-details.html" class="view-more-btn">View More</a>
+                </li>
+
+                <!-- Candidate 3 (Bharatiya Janata Party) -->
+                <li class="candidate-item">
+                    <img src="bjp_candidate.jpg" alt="BJP Candidate" class="candidate-photo">
+                    <div class="candidate-name">K. Haribabu</div>
+                    <div class="candidate-party">Bharatiya Janata Party (BJP)</div>
+                    <div class="candidate-description">K. Haribabu is the leader of the BJP in Andhra Pradesh. His campaign focuses on national security, development, and increasing the state's participation in the central government’s schemes.</div>
+                    <a href="candidate-details.html" class="view-more-btn">View More</a>
+                </li>
+
+                <!-- Candidate 4 (Indian National Congress) -->
+                <li class="candidate-item">
+                    <img src="congress_candidate.jpg" alt="Congress Candidate" class="candidate-photo">
+                    <div class="candidate-name">N. Raghuveera Reddy</div>
+                    <div class="candidate-party">Indian National Congress (INC)</div>
+                    <div class="candidate-description">N. Raghuveera Reddy is a prominent Congress leader in Andhra Pradesh, focusing on agricultural reforms, farmer welfare, and strengthening rural economies.</div>
+                    <a href="candidate-details.html" class="view-more-btn">View More</a>
+                </li>
+
+                <!-- Candidate 5 (Praja Rajyam Party) -->
+                <li class="candidate-item">
+                    <img src="prp_candidate.jpg" alt="Praja Rajyam Party Candidate" class="candidate-photo">
+                    <div class="candidate-name">K. Chiranjeevi</div>
+                    <div class="candidate-party">Praja Rajyam Party (PRP)</div>
+                    <div class="candidate-description">Chiranjeevi is a popular actor-turned-politician who founded Praja Rajyam Party in 2008. He focuses on the upliftment of marginalized communities and socio-economic development of rural Andhra Pradesh.</div>
+                    <a href="candidate-details.html" class="view-more-btn">View More</a>
+                </li>
+
+                <!-- Candidate 6 (BSP - Bahujan Samaj Party) -->
+                <li class="candidate-item">
+                    <img src="bsp_candidate.jpg" alt="BSP Candidate" class="candidate-photo">
+                    <div class="candidate-name">M. V. Mysoora Reddy</div>
+                    <div class="candidate-party">Bahujan Samaj Party (BSP)</div>
+                    <div class="candidate-description">Mysoora Reddy is the leader of the BSP in Andhra Pradesh. He is focused on promoting social justice, equality, and fighting for the rights of Dalits and backward classes in the state.</div>
+                    <a href="candidate-details.html" class="view-more-btn">View More</a>
+                </li>
+
+            </ul>
+
+            <a href="index.html" class="back-to-home">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2024 Online Voting System | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+</body>
+
+</html>
